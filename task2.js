@@ -15,11 +15,15 @@ const dog = {
  }
 
  function makeDomestic (isDomestic) {
- this.isDomestic = isDomestic
- console.log(this)
- console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
- return this
+ const newObj = {
+   ...this,
+   isDomestic: isDomestic,
  }
+ console.log(newObj)
+ console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
+ return newObj
+ }
+
 
 const newFunction = makeDomestic.bind(dog,true)
 newFunction()
