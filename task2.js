@@ -18,6 +18,7 @@ const dog = {
  this.isDomestic = isDomestic
  console.log(this)
  console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
+ return this
  }
 
 const newFunction = makeDomestic.bind(dog,true)
